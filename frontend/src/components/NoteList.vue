@@ -15,11 +15,11 @@ export default {
   name: 'note-list',
   computed: mapGetters(['notes']),
   methods: {
-    deleteNote(note){
+    deleteNote (note) {
       this.$store.dispatch('deleteNote', note)
     }
   },
-  beforeMount(){
+  beforeMount () {
     this.$store.dispatch('getNotes')
   }
 }

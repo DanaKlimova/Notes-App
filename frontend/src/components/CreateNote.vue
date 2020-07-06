@@ -19,20 +19,20 @@
 <script>
 export default {
   name: 'create-note',
-  data(){
+  data () {
     return {
       'title': '',
       'body': ''
     }
   },
   methods: {
-    submitForm(event){
+    submitForm (event) {
       this.createNote()
       this.title = ''
       this.body = ''
       event.preventDefault()
     },
-    createNote(){
+    createNote () {
       this.$store.dispatch('createNote', {title: this.title, body: this.body})
     }
   }
